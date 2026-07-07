@@ -122,14 +122,6 @@ const targetRoles = [
   "Vulnerability Management Analyst",
 ];
 
-const sampleQuestions = [
-  "What cybersecurity projects has Barbara built?",
-  "Why does cloud security fit her career direction?",
-  "What school projects support her systems background?",
-  "How does hands-on repair work connect to cybersecurity?",
-  "What roles is Barbara targeting?",
-];
-
 function SectionHeading({
   eyebrow,
   title,
@@ -154,7 +146,10 @@ function SectionHeading({
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+      <div className="pointer-events-none absolute left-[-10rem] top-[-10rem] h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-20 right-[-8rem] h-96 w-96 rounded-full bg-purple-500/20 blur-3xl" />
+
       <section className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-10 md:py-16">
         <nav className="flex flex-wrap items-center justify-between gap-4 rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur">
           <p className="font-bold text-cyan-200">BarbOS</p>
@@ -171,39 +166,55 @@ export default function Home() {
             <a href="#assistant" className="hover:text-cyan-200">
               Ask BarbOS
             </a>
+            <a href="#contact" className="hover:text-cyan-200">
+              Contact
+            </a>
           </div>
         </nav>
 
         <section className="rounded-3xl border border-cyan-400/20 bg-slate-900/70 p-8 shadow-2xl shadow-cyan-500/10 md:p-12">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
-            BarbOS Portfolio AI
-          </p>
+          <div className="grid gap-8 md:grid-cols-[1.4fr_0.6fr] md:items-center">
+            <div>
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+                Barbara Espericueta's Portfolio
+              </p>
 
-          <h1 className="mb-6 max-w-5xl text-4xl font-bold tracking-tight md:text-6xl">
-            Cybersecurity, cloud security, API security, and systems thinking.
-          </h1>
+              <h1 className="mb-6 max-w-5xl text-4xl font-bold tracking-tight md:text-6xl">
+                Cybersecurity, Cloud Security, API Security, and Systems
+                Thinking.
+              </h1>
 
-          <p className="max-w-3xl text-lg leading-8 text-slate-300">
-            Hi, I&apos;m Barbara. I&apos;m building a cybersecurity portfolio
-            focused on secure infrastructure, cloud systems, API security,
-            Linux troubleshooting, responsible AI, technical documentation, and
-            practical problem solving.
-          </p>
+              <p className="max-w-3xl text-lg leading-8 text-slate-300">
+                Hi, I&apos;m Barbara. This is my cybersecurity
+                portfolio focused on secure infrastructure, cloud systems, API
+                security, Linux troubleshooting, responsible AI, technical
+                documentation, and practical problem solving.
+              </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#projects"
-              className="rounded-full bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
-            >
-              View Projects
-            </a>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="#projects"
+                  className="rounded-full bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
+                >
+                  View Projects
+                </a>
 
-            <a
-              href="#assistant"
-              className="rounded-full border border-cyan-300/50 px-6 py-3 font-semibold text-cyan-200 transition hover:bg-cyan-300/10"
-            >
-              Ask BarbOS
-            </a>
+                <a
+                  href="#assistant"
+                  className="rounded-full border border-cyan-300/50 px-6 py-3 font-semibold text-cyan-200 transition hover:bg-cyan-300/10"
+                >
+                  Ask BarbOS
+                </a>
+              </div>
+            </div>
+
+            <div className="flex justify-center md:justify-end">
+              <img
+                src="/barbara-profile.png"
+                alt="Barbara profile photo"
+                className="h-56 w-56 rounded-full border-4 border-cyan-300/30 object-cover shadow-2xl shadow-cyan-500/20"
+              />
+            </div>
           </div>
         </section>
 
@@ -332,37 +343,10 @@ export default function Home() {
           id="assistant"
           className="rounded-3xl border border-purple-400/20 bg-purple-950/30 p-8"
         >
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-purple-300">
-            Ask BarbOS
-          </p>
 
           <h2 className="mb-4 text-3xl font-bold">
-            Portfolio AI assistant coming next
+            Portfolio AI Assistant
           </h2>
-
-          <p className="mb-6 max-w-3xl leading-8 text-slate-300">
-            BarbOS will answer questions about my cybersecurity labs, cloud
-            security notes, API security learning, Linux/Docker troubleshooting,
-            school projects, training, career story, and target roles using an
-            approved public knowledge base.
-          </p>
-
-          <div className="rounded-2xl border border-white/10 bg-slate-950 p-5">
-            <p className="mb-4 text-sm font-semibold text-cyan-300">
-              Example questions:
-            </p>
-
-            <div className="grid gap-3 md:grid-cols-2">
-              {sampleQuestions.map((question) => (
-                <div
-                  key={question}
-                  className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-300"
-                >
-                  {question}
-                </div>
-              ))}
-            </div>
-          </div>
 
           <div className="mt-6">
             <BarbOSChat />

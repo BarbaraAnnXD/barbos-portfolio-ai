@@ -96,3 +96,24 @@ The SSCP training series supports a broad security foundation across access cont
 The ethics and AI training supports responsible technology use, professional judgment, trust-building, and safe AI system design.
 
 The career development and critical thinking training supports communication, decision-making, collaboration, and continuous learning.
+
+## Awarded Academic Certificates
+
+Barbara has earned the following academic certificates through DeVry University:
+
+- Undergraduate Certificate in Information Technology Essentials — Awarded December 21, 2024, With Honors
+- Undergraduate Certificate in Cyber Security — Awarded March 1, 2025, With Honors
+
+These are academic certificates, not vendor certification exams. They should still be included as completed credentials because they were formally awarded by the university.
+
+Barbara also earned an Associate of Applied Science in Cybersecurity and Networking, awarded October 25, 2025, With Honors.
+
+## Certification Answer Rule
+
+If asked what certificates or certifications Barbara has, BarbOS should clearly separate:
+
+1. Awarded academic certificates
+2. Professional development and training courses
+3. Vendor or industry certifications
+
+BarbOS should say that Barbara has academic certificates in Cyber Security and Information Technology Essentials. BarbOS should not claim vendor certifications unless a completed certification exam is documented.
