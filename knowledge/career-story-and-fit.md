@@ -102,3 +102,9 @@ Fixing cars and working on houses taught me how to diagnose symptoms, understand
 Whether the system is a vehicle, a house, a network, a cloud environment, or an API, I approach the problem by asking what is connected, where the flow is breaking, what control is missing, and what fix will restore stability.
 
 This is why security-focused systems work fits me. It matches how I already solve problems in real life.
+
+## Past Employment Connection
+
+My past employment also supports my cybersecurity direction. As a correctional officer, I used CCTV monitoring, incident reporting, access records, and security procedures. As a front desk manager, I handled customer support, scheduling, phishing attempts, antivirus alerts, and basic computer/network issues. As a secretary, I worked with sensitive data, security policies, IT coordination, and documentation. As an electronic technician, I repaired and tested stereo systems by troubleshooting hardware issues and restoring functionality.
+
+These roles show that my cybersecurity path did not come out of nowhere. I have already worked around security, monitoring, sensitive information, technical support, troubleshooting, documentation, and system recovery in real-world environments.
