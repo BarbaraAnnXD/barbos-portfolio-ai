@@ -7,14 +7,6 @@ type ChatMessage = {
   content: string;
 };
 
-const starterQuestions = [
-  "What cybersecurity projects has Barbara built?",
-  "Why does cloud security fit Barbara?",
-  "What roles is Barbara targeting?",
-  "What school projects support her systems background?",
-  "How does hands-on repair work connect to cybersecurity?",
-];
-
 export default function BarbOSChat() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState<ChatMessage[]>([
@@ -99,7 +91,7 @@ export default function BarbOSChat() {
   }
 
   return (
-    <div className="rounded-3xl border border-purple-400/20 bg-slate-950 p-6">
+    <div className="rounded-3xl border border-purple-400/30 bg-slate-950/75 p-6 backdrop-blur-sm">
       <div className="mb-5 flex flex-col justify-between gap-4 md:flex-row md:items-start">
         <div>
           <p className="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-purple-300">
@@ -119,19 +111,6 @@ export default function BarbOSChat() {
         >
           Clear chat
         </button>
-      </div>
-
-      <div className="mb-5 grid gap-3 md:grid-cols-2">
-        {starterQuestions.map((question) => (
-          <button
-            key={question}
-            onClick={() => askBarbOS(question)}
-            disabled={loading}
-            className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left text-sm text-slate-300 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100 disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            {question}
-          </button>
-        ))}
       </div>
 
       <div className="mb-5 max-h-[420px] space-y-4 overflow-y-auto rounded-2xl border border-white/10 bg-black/30 p-4">

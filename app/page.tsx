@@ -190,90 +190,65 @@ export default function Home() {
           </div>
         </nav>
 
-        <section className="rounded-3xl border border-cyan-400/20 bg-slate-900/70 p-8 shadow-2xl shadow-cyan-500/10 md:p-12">
-          <div className="grid gap-8 md:grid-cols-[1.4fr_0.6fr] md:items-center">
-            <div>
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
-                Barbara Espericueta's Portfolio
-              </p>
+        <section className="relative overflow-hidden rounded-3xl border border-cyan-400/20 p-8 shadow-2xl shadow-cyan-500/10 md:p-12">
+  <div
+    className="absolute inset-0 bg-cover bg-center opacity-20"
+    style={{ backgroundImage: "url('/hero-cyber-bg.png')" }}
+  />
+  <div className="absolute inset-0 bg-slate-950/80" />
 
-              <h1 className="mb-6 max-w-5xl text-4xl font-bold tracking-tight md:text-6xl">
-                Cybersecurity, Cloud Security, API Security, and Systems
-                Thinking.
-              </h1>
+  <div className="relative z-10 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+    <div>
+      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+        Barbara Espericueta&apos;s Portfolio
+      </p>
 
-              <p className="max-w-3xl text-lg leading-8 text-slate-300">
-                Hi, I&apos;m Barbara. This is my cybersecurity
-                portfolio focused on secure infrastructure, cloud systems, API
-                security, Linux troubleshooting, responsible AI, technical
-                documentation, and practical problem solving.
-              </p>
+      <h1 className="mb-6 max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
+        Cybersecurity, Cloud Security, API Security, and Systems Thinking.
+      </h1>
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#projects"
-                  className="rounded-full bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
-                >
-                  View Projects
-                </a>
+      <p className="max-w-3xl text-lg leading-8 text-slate-300">
+        Hi, I&apos;m Barbara. This is my cybersecurity portfolio focused on
+        secure infrastructure, cloud systems, API security, Linux
+        troubleshooting, responsible AI, technical documentation, and practical
+        problem solving.
+      </p>
 
-                <a
-                  href="#assistant"
-                  className="rounded-full border border-cyan-300/50 px-6 py-3 font-semibold text-cyan-200 transition hover:bg-cyan-300/10"
-                >
-                  Ask BarbOS
-                </a>
-              </div>
-            </div>
-
-            <div className="flex justify-center md:justify-end">
-              <img
-                src="/barbara-profile.png"
-                alt="Barbara profile photo"
-                className="h-56 w-56 rounded-full border-4 border-cyan-300/30 object-cover shadow-2xl shadow-cyan-500/20"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="about"
-          className="rounded-3xl border border-white/10 bg-white/5 p-8"
+      <div className="mt-8 flex flex-wrap gap-4">
+        <a
+          href="#projects"
+          className="rounded-full bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
         >
-          <SectionHeading
-            eyebrow="About"
-            title="Security-focused Systems Thinker"
-            description="I am building a career in cybersecurity and systems work because I like understanding how connected parts work together, where flow breaks, and what controls restore stability."
-          />
+          View Projects
+        </a>
 
-          <div className="grid gap-5 md:grid-cols-2">
-            <div className="rounded-2xl border border-cyan-300/20 bg-cyan-950/20 p-6">
-              <h3 className="mb-3 text-2xl font-bold text-cyan-200">
-                About Me
-              </h3>
-              <p className="leading-8 text-slate-300">
-                I am a cybersecurity and networking student with a hands-on
-                background in technical troubleshooting, security monitoring,
-                sensitive data handling, electronics repair, and practical
-                systems problem solving. My work connects cloud security, API
-                security, Linux troubleshooting, responsible AI, documentation,
-                and secure infrastructure.
-              </p>
-            </div>
+        <a
+          href="#assistant"
+          className="rounded-full border border-cyan-300/50 px-6 py-3 font-semibold text-cyan-200 transition hover:bg-cyan-300/10"
+        >
+          Ask BarbOS
+        </a>
+      </div>
+    </div>
 
-            <div className="rounded-2xl border border-purple-300/20 bg-purple-950/30 p-6">
-              <h3 className="mb-3 text-2xl font-bold text-purple-200">
-                Mission Statement
-              </h3>
-              <p className="leading-8 text-slate-300">
-                My mission is to help organizations make their systems more
-                secure, visible, reliable, and controlled by combining
-                cybersecurity knowledge, systems thinking, technical
-                documentation, and practical troubleshooting.
-              </p>
-            </div>
-          </div>
-        </section>
+    <div className="flex flex-col items-center gap-6 lg:items-end">
+      <img
+        src="/barbara-profile.png"
+        alt="Barbara profile photo"
+        className="h-60 w-60 rounded-full border-4 border-cyan-300/30 object-cover shadow-2xl shadow-cyan-500/20"
+      />
+
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noreferrer"
+        className="w-full max-w-xs rounded-full border border-purple-300/50 px-6 py-3 text-center font-semibold text-purple-200 transition hover:bg-purple-300/10"
+      >
+        Download Resume
+      </a>
+    </div>
+  </div>
+</section>
 
         <section id="projects">
           <SectionHeading
@@ -404,17 +379,30 @@ export default function Home() {
           </div>
         </section>
 
-                <section
+        <section
           id="assistant"
-          className="rounded-3xl border border-purple-400/20 bg-purple-950/30 p-8"
+          className="relative overflow-hidden rounded-3xl border border-purple-400/20 p-8"
         >
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-45"
+            style={{ backgroundImage: "url('/hero-cyber-bg.png')" }}
+          />
+          <div className="absolute inset-0 bg-slate-950/55" />
 
-          <h2 className="mb-4 text-3xl font-bold">
-            Portfolio AI Assistant
-          </h2>
+          <div className="relative z-10">
+            <h2 className="mb-4 text-3xl font-bold">
+              Portfolio AI Assistant
+            </h2>
 
-          <div className="mt-6">
-            <BarbOSChat />
+            <p className="mb-6 max-w-3xl leading-8 text-slate-300">
+              Chat with BarbOS to ask questions about my cybersecurity projects,
+              education, training, school work, hands-on systems experience,
+              resume, and career direction.
+            </p>
+
+            <div className="mt-6">
+              <BarbOSChat />
+            </div>
           </div>
         </section>
       </section>
