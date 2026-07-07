@@ -1,3 +1,5 @@
+import BarbOSChat from "./components/BarbOSChat";
+
 const projects = [
   {
     title: "Cloud Security Labs",
@@ -326,7 +328,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section
+                <section
           id="assistant"
           className="rounded-3xl border border-purple-400/20 bg-purple-950/30 p-8"
         >
@@ -360,6 +362,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="mt-6">
+            <BarbOSChat />
           </div>
         </section>
       </section>
