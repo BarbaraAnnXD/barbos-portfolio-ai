@@ -50,47 +50,65 @@ const schoolProjects = [
   {
     course: "CEIS101",
     title: "IoT Home Automation and Security System",
-    theme: "Connected hardware, software, and networking into a simulated IoT security system.",
+    theme:
+      "Connected hardware, software, and networking into a simulated IoT security system.",
+    file: "/school-projects/ceis101-iot-home-automation-security.pdf",
   },
   {
     course: "CEIS106",
     title: "Linux Operating System Administration",
-    theme: "Practiced Linux file systems, shell scripts, users/groups, network configuration, and system monitoring.",
+    theme:
+      "Practiced Linux file systems, shell scripts, users/groups, network configuration, and system monitoring.",
+    file: "/school-projects/ceis106-linux-operating-systems.pdf",
   },
   {
     course: "CEIS110",
     title: "Weather Data Analysis with Python and NOAA API",
-    theme: "Used Python and a cloud-based API to collect and analyze real-world weather data.",
+    theme:
+      "Used Python and a cloud-based API to collect and analyze real-world weather data.",
+    file: "/school-projects/ceis110-weather-data-analysis-python-api.pdf",
   },
   {
     course: "CEIS114",
     title: "Multi-Intersection Traffic Light System",
-    theme: "Used Wokwi Lab to explore microcontroller logic, timing, and digital device control.",
+    theme:
+      "Used Wokwi Lab to explore microcontroller logic, timing, and digital device control.",
+    file: "/school-projects/ceis114-traffic-light-system.pdf",
   },
   {
     course: "NETW191",
     title: "SOHO Network Design and Configuration",
-    theme: "Designed a small network with router configuration, subnetting, wireless security, and documentation.",
+    theme:
+      "Designed a small network with router configuration, subnetting, wireless security, and documentation.",
+    file: "/school-projects/netw191-soho-network-design.pdf",
   },
   {
     course: "SEC285",
     title: "Security Attacks and Defense Mechanisms",
-    theme: "Studied people, data, network, and device security through confidentiality, integrity, and availability.",
+    theme:
+      "Studied people, data, network, and device security through confidentiality, integrity, and availability.",
+    file: "/school-projects/sec285-attacks-defense-mechanisms.pdf",
   },
   {
     course: "SEC290",
     title: "Secure InfoSec Learning Environment",
-    theme: "Built a VM-based security lab with snapshots, network testing, segmentation, and firewall concepts.",
+    theme:
+      "Built a VM-based security lab with snapshots, network testing, segmentation, and firewall concepts.",
+    file: "/school-projects/sec290-infrastructure-security-lab.pdf",
   },
   {
     course: "TECH204",
     title: "Applied Physics with IoT Integration",
-    theme: "Used sensors and real-time data to connect physical systems, data analysis, and technical problem solving.",
+    theme:
+      "Used sensors and real-time data to connect physical systems, data analysis, and technical problem solving.",
+    file: "/school-projects/tech204-applied-physics-iot.pdf",
   },
   {
     course: "NETW310",
     title: "Electronic Communication Systems",
-    theme: "Explored wireline/wireless transmission, modulation, encoding, signals, and communication reliability.",
+    theme:
+      "Explored wireline/wireless transmission, modulation, encoding, signals, and communication reliability.",
+    file: "/school-projects/netw310-electronic-communication-systems.pdf",
   },
 ];
 
@@ -218,6 +236,45 @@ export default function Home() {
           </div>
         </section>
 
+        <section
+          id="about"
+          className="rounded-3xl border border-white/10 bg-white/5 p-8"
+        >
+          <SectionHeading
+            eyebrow="About"
+            title="Security-focused Systems Thinker"
+            description="I am building a career in cybersecurity and systems work because I like understanding how connected parts work together, where flow breaks, and what controls restore stability."
+          />
+
+          <div className="grid gap-5 md:grid-cols-2">
+            <div className="rounded-2xl border border-cyan-300/20 bg-cyan-950/20 p-6">
+              <h3 className="mb-3 text-2xl font-bold text-cyan-200">
+                About Me
+              </h3>
+              <p className="leading-8 text-slate-300">
+                I am a cybersecurity and networking student with a hands-on
+                background in technical troubleshooting, security monitoring,
+                sensitive data handling, electronics repair, and practical
+                systems problem solving. My work connects cloud security, API
+                security, Linux troubleshooting, responsible AI, documentation,
+                and secure infrastructure.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-purple-300/20 bg-purple-950/30 p-6">
+              <h3 className="mb-3 text-2xl font-bold text-purple-200">
+                Mission Statement
+              </h3>
+              <p className="leading-8 text-slate-300">
+                My mission is to help organizations make their systems more
+                secure, visible, reliable, and controlled by combining
+                cybersecurity knowledge, systems thinking, technical
+                documentation, and practical troubleshooting.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section id="projects">
           <SectionHeading
             eyebrow="Project Portfolio"
@@ -248,7 +305,7 @@ export default function Home() {
         >
           <SectionHeading
             eyebrow="Academic Foundation"
-            title="Cybersecurity and networking education"
+            title="Cybersecurity and Networking Education"
             description="My academic background supports a security systems path through cybersecurity, networking, cloud computing, infrastructure security, penetration testing, incident response, technical writing, and AI for cybersecurity."
           />
 
@@ -301,6 +358,14 @@ export default function Home() {
                 </p>
                 <h3 className="mb-3 text-xl font-bold">{project.title}</h3>
                 <p className="leading-7 text-slate-300">{project.theme}</p>
+                <a
+                  href={project.file}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex rounded-full border border-cyan-300/50 px-4 py-2 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-300/10"
+                >
+                  View Project
+                </a>
               </article>
             ))}
           </div>
