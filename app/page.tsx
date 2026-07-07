@@ -1,65 +1,96 @@
-import Image from "next/image";
+const projects = [
+  {
+    title: "Cloud Security Labs",
+    description:
+      "Hands-on labs focused on shared responsibility, access control, logging, monitoring, network controls, and risk documentation.",
+  },
+  {
+    title: "API Security Lab",
+    description:
+      "Safe API security notes and checklists covering authentication, authorization, information disclosure, rate limiting, and responsible testing.",
+  },
+  {
+    title: "Linux Docker Support Lab",
+    description:
+      "Linux and Docker troubleshooting labs focused on system health, logs, ports, services, and support-style documentation.",
+  },
+  {
+    title: "ClarityFlow AI",
+    description:
+      "An AI-powered career decision support tool built with Python and Streamlit, including responsible AI controls and human review reminders.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-slate-950 text-white">
+      <section className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16">
+        <div className="rounded-3xl border border-cyan-400/20 bg-slate-900/70 p-8 shadow-2xl shadow-cyan-500/10">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+            BarbOS Portfolio AI
           </p>
+
+          <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">
+            Cybersecurity, cloud security, API security, and systems thinking.
+          </h1>
+
+          <p className="max-w-3xl text-lg leading-8 text-slate-300">
+            Hi, I&apos;m Barbara. I&apos;m building a cybersecurity portfolio
+            focused on secure infrastructure, cloud systems, API security,
+            Linux troubleshooting, responsible AI, and technical documentation.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              className="rounded-full bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
+            >
+              View Projects
+            </a>
+
+            <a
+              href="#assistant"
+              className="rounded-full border border-cyan-300/50 px-6 py-3 font-semibold text-cyan-200 transition hover:bg-cyan-300/10"
+            >
+              Ask BarbOS
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        <section id="projects" className="grid gap-5 md:grid-cols-2">
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg"
+            >
+              <h2 className="mb-3 text-2xl font-bold text-cyan-200">
+                {project.title}
+              </h2>
+              <p className="leading-7 text-slate-300">{project.description}</p>
+            </article>
+          ))}
+        </section>
+
+        <section
+          id="assistant"
+          className="rounded-3xl border border-purple-400/20 bg-purple-950/30 p-8"
+        >
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-purple-300">
+            Coming Soon
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Ask BarbOS about my portfolio
+          </h2>
+
+          <p className="max-w-3xl leading-8 text-slate-300">
+            BarbOS will answer questions about my cybersecurity labs, cloud
+            security notes, API security learning, Linux/Docker troubleshooting,
+            responsible AI work, and target roles using an approved knowledge
+            base.
+          </p>
+        </section>
+      </section>
+    </main>
   );
 }
