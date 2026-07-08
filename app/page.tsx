@@ -250,6 +250,32 @@ export default function Home() {
   </div>
 </section>
 
+<section
+          id="assistant"
+          className="relative overflow-hidden rounded-3xl border border-purple-400/20 p-8"
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-45"
+          />
+          <div className="absolute inset-0 bg-slate-950/55" />
+
+          <div className="relative z-10">
+            <h2 className="mb-4 text-3xl font-bold">
+              Ask BarbOS About My Portfolio
+            </h2>
+
+            <p className="mb-6 max-w-3xl leading-8 text-slate-300">
+              Chat with BarbOS to ask questions about my cybersecurity projects,
+              education, training, school work, hands-on systems experience,
+              resume, and career direction.
+            </p>
+
+            <div className="mt-6">
+              <BarbOSChat />
+            </div>
+          </div>
+        </section>
+
         <section id="projects">
           <SectionHeading
             eyebrow="Project Portfolio"
@@ -376,33 +402,6 @@ export default function Home() {
                 {role}
               </div>
             ))}
-          </div>
-        </section>
-
-        <section
-          id="assistant"
-          className="relative overflow-hidden rounded-3xl border border-purple-400/20 p-8"
-        >
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-45"
-            style={{ backgroundImage: "url('/hero-cyber-bg.png')" }}
-          />
-          <div className="absolute inset-0 bg-slate-950/55" />
-
-          <div className="relative z-10">
-            <h2 className="mb-4 text-3xl font-bold">
-              Portfolio AI Assistant
-            </h2>
-
-            <p className="mb-6 max-w-3xl leading-8 text-slate-300">
-              Chat with BarbOS to ask questions about my cybersecurity projects,
-              education, training, school work, hands-on systems experience,
-              resume, and career direction.
-            </p>
-
-            <div className="mt-6">
-              <BarbOSChat />
-            </div>
           </div>
         </section>
       </section>
