@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://barbos-portfolio-ai.vercel.app"),
   title: {
     default: "Barbara Espericueta | Cybersecurity & Networking",
     template: "%s | Barbara Espericueta",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     "Barbara Espericueta's cybersecurity and networking portfolio: cloud and API security, systems projects, technical writing, and BarbOS.",
   applicationName: "BarbOS",
   authors: [{ name: "Barbara Espericueta" }],
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "BarbOS",
