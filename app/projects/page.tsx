@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects",
+  alternates: { canonical: "/projects" },
   description:
     "Explore Barbara Espericueta's cybersecurity, networking, AI, and systems projects, including BarbOS, ClarityFlow AI, and PermitPilot.",
 };
