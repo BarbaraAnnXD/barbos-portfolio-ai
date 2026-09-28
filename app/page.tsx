@@ -170,9 +170,10 @@ export default function Home() {
 
       <section className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-10 md:py-16">
         <nav className="flex flex-wrap items-center justify-between gap-4 rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur">
-          <p className="font-bold text-cyan-200">BarbOS</p>
+          <a href="/" className="font-bold text-cyan-200">BarbOS</a>
           <div className="flex flex-wrap gap-4 text-sm text-slate-300">
-            <a href="#projects" className="hover:text-cyan-200">
+            <a href="/about" className="hover:text-cyan-200">About</a>
+            <a href="/projects" className="hover:text-cyan-200">
               Projects
             </a>
             <a href="#education" className="hover:text-cyan-200">
@@ -204,7 +205,7 @@ export default function Home() {
       </p>
 
       <h1 className="mb-6 max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
-        Cybersecurity, Cloud Security, API Security, and Systems Thinking.
+        Barbara Espericueta — Cybersecurity &amp; Networking
       </h1>
 
       <p className="max-w-3xl text-lg leading-8 text-slate-300">
@@ -216,7 +217,7 @@ export default function Home() {
 
       <div className="mt-8 flex flex-wrap gap-4">
         <a
-          href="#projects"
+          href="/projects"
           className="rounded-full bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200"
         >
           View Projects
@@ -298,6 +299,7 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <a href="/projects" className="mt-6 inline-flex rounded-full border border-cyan-300/50 px-5 py-3 font-semibold text-cyan-200 hover:bg-cyan-300/10">Explore all projects</a>
         </section>
 
         <section
@@ -404,6 +406,14 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <footer id="contact" className="border-t border-white/10 py-8 text-slate-300">
+          <p className="mb-3 font-semibold text-white">Barbara Espericueta</p>
+          <div className="flex flex-wrap gap-5">
+            <a className="hover:text-cyan-200" href="/about">About Barbara</a>
+            <a className="hover:text-cyan-200" href="https://github.com/BarbaraAnnXD" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a className="hover:text-cyan-200" href="https://www.linkedin.com/in/barbara-e-4b8b531aa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </footer>
       </section>
     </main>
   );
