@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BarbOS — Barbara Espericueta's portfolio
 
-## Getting Started
+A Next.js portfolio for Barbara's cybersecurity, networking, and systems projects. The Ask BarbOS assistant reads approved Markdown summaries from `knowledge/`.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For Ask BarbOS, set `OPENAI_API_KEY` in a local `.env.local` file. Keep that file out of Git. The portfolio pages can be viewed without a key.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Import this repository into Vercel as a Next.js project. Add `OPENAI_API_KEY` as a **Secret** environment variable for Preview and Production if the assistant should answer questions. Redeploy after changing environment variables. Do not add the key to the repository or expose it with a `NEXT_PUBLIC_` prefix.
 
-## Learn More
+The chat endpoint uses an OpenAI API project and may incur usage charges when the public site receives questions. Set a project spend limit and monitor usage before opening the assistant broadly.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+When the production URL is known, add it to the site's canonical metadata and sitemap, then verify the domain in Google Search Console.
