@@ -10,10 +10,6 @@ type ChatMessage = {
   content: string;
 };
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 function loadKnowledgeBase() {
   const knowledgeDir = path.join(process.cwd(), "knowledge");
 
@@ -48,12 +44,18 @@ function formatConversation(messages: ChatMessage[]) {
 
 export async function POST(request: Request) {
   try {
+    const contentLength = Number(request.headers.get("content-length") || 0);
+    if (contentLength > 16_000) {
+      return NextResponse.json({ error: "Question is too long." }, { status: 413 });
+    }
     const body = await request.json();
     const messages = body.messages as ChatMessage[] | undefined;
 
-    if (!Array.isArray(messages) || messages.length === 0) {
+    if (!Array.isArray(messages) || messages.length === 0 || messages.length > 10 ||
+        messages.some((message) => !message || !["user", "assistant"].includes(message.role) ||
+          typeof message.content !== "string" || message.content.length > 1000)) {
       return NextResponse.json(
-        { error: "At least one chat message is required." },
+        { error: "Send a shorter portfolio question." },
         { status: 400 }
       );
     }
@@ -74,11 +76,13 @@ export async function POST(request: Request) {
       );
     }
 
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const knowledgeBase = loadKnowledgeBase();
     const conversation = formatConversation(messages);
 
     const response = await openai.responses.create({
       model: process.env.OPENAI_MODEL || "gpt-4.1-mini",
+      max_output_tokens: 350,
       instructions: `
 You are BarbOS, Barbara's cybersecurity portfolio assistant.
 
