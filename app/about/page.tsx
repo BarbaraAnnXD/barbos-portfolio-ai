@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
+  alternates: { canonical: "/about" },
   description:
     "Meet Barbara Espericueta, a cybersecurity and networking student building practical experience in API security, cloud systems, Linux, and technical documentation.",
 };
@@ -11,6 +12,7 @@ export default function About() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Barbara Espericueta",
+    url: "https://barbos-portfolio-ai.vercel.app/about",
     description: "Cybersecurity and networking student focused on secure systems, cloud and API security.",
     sameAs: [
       "https://github.com/BarbaraAnnXD",
