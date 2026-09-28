@@ -239,14 +239,6 @@ export default function Home() {
         className="h-60 w-60 rounded-full border-4 border-cyan-300/30 object-cover shadow-2xl shadow-cyan-500/20"
       />
 
-      <a
-        href="/resume.pdf"
-        target="_blank"
-        rel="noreferrer"
-        className="w-full max-w-xs rounded-full border border-purple-300/50 px-6 py-3 text-center font-semibold text-purple-200 transition hover:bg-purple-300/10"
-      >
-        Download Resume
-      </a>
     </div>
   </div>
 </section>
@@ -268,7 +260,7 @@ export default function Home() {
             <p className="mb-6 max-w-3xl leading-8 text-slate-300">
               Chat with BarbOS to ask questions about my cybersecurity projects,
               education, training, school work, hands-on systems experience,
-              resume, and career direction.
+              and career direction.
             </p>
 
             <div className="mt-6">
