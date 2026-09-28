@@ -41,7 +41,7 @@ export default function BarbOSChat() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          messages: updatedMessages,
+          messages: updatedMessages.slice(-10),
         }),
       });
 
@@ -148,6 +148,7 @@ export default function BarbOSChat() {
       <div className="flex flex-col gap-3 md:flex-row">
         <input
           value={message}
+          maxLength={1000}
           onChange={(event) => setMessage(event.target.value)}
           onKeyDown={(event) => {
             if (event.key === "Enter") {
